@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroGaze Assessment</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- WebGazer.js and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/localforage@1.10.0/dist/localforage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webgazer@3.3.0/dist/webgazer.js"></script>
+    <style>
+      /* Hide WebGazer video initially or style it nicely */
+      #webgazerVideoContainer {
+        position: fixed !important;
+        top: 10px !important;
+        left: 10px !important;
+        width: 160px !important;
+        height: 120px !important;
+        z-index: 10; /* Reduced from 9999 to allow UI to overlay */
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid #3b82f6;
+        display: none; /* Hidden by default, toggled via React */
+        background: black;
+        pointer-events: none; /* CRITICAL: Allows clicking buttons underneath the video */
+        opacity: 0.8;
+      }
+      /* Force video and canvas to fit container exactly to prevent clipping */
+      #webgazerVideoContainer video,
+      #webgazerVideoContainer canvas {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        margin: 0 !important;
+      }
+      
+      body {
+        background-color: #f8fafc;
+        color: #1e293b;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

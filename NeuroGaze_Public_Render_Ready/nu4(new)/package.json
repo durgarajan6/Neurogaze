@@ -1,0 +1,41 @@
+{
+  "name": "neurogaze-assessment",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx api/index.ts",
+    "start": "tsx api/index.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "cloudinary": "^2.9.0",
+    "docx": "^9.7.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "framer-motion": "^12.38.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.554.0",
+    "motion": "^12.38.0",
+    "multer": "^2.0.2",
+    "path": "^0.12.7",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.6",
+    "recharts": "^3.4.1",
+    "serverless-http": "^4.0.0",
+    "url": "^0.11.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
